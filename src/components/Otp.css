@@ -1,0 +1,248 @@
+/* Main container */
+.otp-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.otp-modal {
+  position: relative;
+  width: 1163px;
+  height: 657px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Left side with car image */
+.otp-image-section {
+  width: 576px;
+  height: 100%;
+  background: url('your-image-path.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 0 0 20px;
+}
+
+/* Right side with form */
+.otp-form-section {
+  flex: 1;
+  padding: 0 40px;
+  position: relative;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 25px;
+  top: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FF0000;
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  transform: rotate(-45deg);
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  left: 40px;
+  top: 57px;
+  font-family: 'adineue PRO', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 44px;
+  color: #0D6EFD;
+}
+
+.logo-car {
+  color: #0D6EFD;
+}
+
+.logo-space {
+  color: #DC3545;
+}
+
+/* Form content */
+.otp-form-content {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2 {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+.otp-instruction {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #747474;
+  margin-bottom: 40px;
+}
+
+/* OTP Inputs */
+.otp-inputs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.otp-input {
+  width: 60px;
+  height: 60px;
+  background: #EEEEEE;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.otp-input:focus {
+  outline: 2px solid #0D6EFD;
+  background: #FFFFFF;
+}
+
+/* Timer and resend */
+.otp-timer {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #747474;
+  margin-bottom: 15px;
+}
+
+.no-otp {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #747474;
+  margin-bottom: 40px;
+}
+
+/* Login button */
+.login-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 37px;
+  width: 100%;
+  height: 45px;
+  background: #DC3545;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background: #C82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .otp-modal {
+    width: 90%;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .otp-image-section {
+    display: none;
+  }
+  
+  .otp-form-section {
+    padding: 60px 40px;
+  }
+  
+  .otp-form-content {
+    position: static;
+    transform: none;
+  }
+  
+  .otp-inputs {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .otp-inputs {
+    gap: 10px;
+  }
+  
+  .otp-input {
+    width: 50px;
+    height: 50px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .otp-instruction,
+  .otp-timer,
+  .no-otp {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.otp-form {
+  margin-top: -5rem !important;
+  padding-top: 0 !important;
+}
+
+.otp-inputs input {
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}

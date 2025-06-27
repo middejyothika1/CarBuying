@@ -1,0 +1,373 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.register-card-split {
+  display: flex;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 1000px;
+  height: 500px;
+}
+
+.register-img-side {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 500px;
+  max-width: 500px;
+  height: 100%;
+  border-right: 2px solid #ececec;
+}
+
+.register-car-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 24px 0;
+}
+
+.register-box {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  padding: 2.5rem 2.5rem 2.2rem 2.5rem !important;
+  background: #fff !important;
+  border-radius: 25px !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.form-fields-wrapper {
+  width: 100% ;
+  max-width: 100% !important;
+  margin-top: 2.2rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  z-index: 1 !important;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #d11212;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 2px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.close-btn:hover {
+  background: #b50e0e;
+}
+
+.logo {
+  text-align: left !important;
+  margin-bottom: 0.7rem;
+  margin-left: 0.2rem;
+}
+
+.logo-text {
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block;
+  text-align: left !important;
+  margin-top:-2rem;
+}
+.car {
+  color: #2196f3;
+}
+.space {
+  color: #d11212;
+}
+
+.auth-toggle {
+  margin-top: -1.8rem !important;
+  margin-bottom: -3.1rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: #ececec !important;
+  width: 100% !important;
+  height: 44px !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03) !important;
+  border-radius: 2px !important;
+  overflow: visible !important;
+  z-index: 2 !important;
+}
+
+.auth-toggle button {
+  flex: 1 !important;
+  border: none !important;
+  background: none !important;
+  cursor: pointer !important;
+  font-size: 1.08rem !important;
+  font-weight: 700 !important;
+  color: #d11212 !important;
+  border-radius: 2px !important;
+  height: 100% !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+
+.auth-toggle .login-btn.active,
+.auth-toggle .signup-btn.active {
+  background: #d11212 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(209,18,18,0.08) !important;
+}
+
+.auth-toggle .login-btn:not(.active),
+.auth-toggle .signup-btn:not(.active) {
+  background: #ececec !important;
+  color: #222 !important;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.18rem;
+  font-size: 0.93rem;
+}
+
+/* Merged phone field */
+.phone-field-merged {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  background: #ececec;
+  box-shadow: none;
+  padding: 0 0.2rem;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.country-code-merged {
+  border: none;
+  background: transparent;
+  padding: 0 6px 0 10px;
+  font-size: 1rem;
+  min-width: 60px;
+  color: #222;
+  outline: none;
+  height: 36px;
+  border-radius: 8px 0 0 8px;
+}
+.phone-number-merged {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0 10px 0 0;
+  font-size: 1rem;
+  color: #222;
+  height: 36px;
+  outline: none;
+  border-radius: 0 8px 8px 0;
+}
+
+.input-inner {
+  width: 100%;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 2px;
+  background: #f6f6f6;
+  padding: 0 8px;
+  font-size: 1rem;
+  color: #222;
+  height: 40px;
+  margin-bottom: 0.1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.input-inner:focus {
+  border: 1.5px solid #d11212;
+}
+.input-inner::placeholder {
+  color: #bdbdbd;
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #d11212;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(209,18,18,0.08);
+  transition: background 0.2s;
+}
+.continue-btn:hover {
+  background-color: #b50e0e;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #d11212;
+  box-shadow: 0 0 0 2px rgba(209, 18, 18, 0.13);
+}
+
+/* Dropdown option hover styling */
+.country-code-merged option {
+  color: #222;
+  background: #fff;
+}
+.country-code-merged option:hover, .country-code-merged option:focus {
+  background: #d11212;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .register-card-split {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+  .register-img-side {
+    min-width: 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ececec;
+  }
+  .register-car-img {
+    width: 60vw;
+    max-width: 340px;
+    margin: 24px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-box {
+    padding: 1.5rem 0.7rem;
+  }
+  .logo-text {
+    font-size: 2rem;
+  }
+  .register-car-img {
+    width: 90vw;
+    max-width: 98vw;
+  }
+}
+
+.input-field-merged {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  width: 100%;
+  margin-bottom: 0;
+}
+.input-inner {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 6px 7px;
+  font-size: 0.93rem;
+  outline: none;
+  color: #222;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+}
+.input-inner::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: unset;
+}
+
+.login-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-form::before, .login-form::after {
+  min-height: 0;
+}
+
+.continue-btn, .auth-toggle button, .phone-field-merged, .country-code-merged, .phone-number-merged {
+  border-radius: 8px !important;
+}
+
+.google-auth-btn {
+  width: 100%;
+  padding: 10px 0;
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, border 0.2s;
+}
+.google-auth-btn:hover {
+  background: #f5f5f5;
+  border-color: #d11212;
+}
+
+/* Reduce separator margin below the form */
+.form-fields-wrapper > div[style*='display: flex'][style*='align-items: center'] {
+  margin: 0.5rem 0 !important;
+}
+
+.phone-number-full {
+  width: 100%;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ececec !important;
+  padding: 0 12px;
+  font-size: 1rem;
+  color: #222;
+  height: 40px;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+.otp-inputs input {
+  width: 48px;
+  height: 56px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111 !important;
+} 
