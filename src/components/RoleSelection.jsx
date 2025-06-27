@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './RoleSelection.css';
 import carparking from '../assets/carparking.jpg';
+import { supabase } from '../supabaseClient';
 
 const RoleSelection = ({ onRoleSelect }) => {
   const [selectedRole, setSelectedRole] = useState(null);
